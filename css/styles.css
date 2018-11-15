@@ -67,12 +67,11 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
-
 #breadcrumb {
     padding: 10px 40px 16px;
     list-style: none;
@@ -145,10 +144,13 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
-  /*center restaurant-list elements in viewport*/
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
 }
 #restaurants-list li {
   background-color: #fff;
@@ -172,7 +174,7 @@ nav h1 a {
 #restaurants-list li h1 {
   color: #f18200;
   font-family: Arial,sans-serif;
-  font-size: 14pt;
+  font-size: 18px;
   font-weight: 200;
   letter-spacing: 0;
   line-height: 1.3;
@@ -221,7 +223,7 @@ nav h1 a {
   bottom: 0;
   position: absolute;
  /* extend footer across entire page*/
-  width: 100%;
+  width: 50%;
 }
 #restaurant-name {
   color: #f18200;
@@ -290,7 +292,8 @@ nav h1 a {
   color: #666;
 }
 
-@media only screen 
+/*alter styling of restaurant detail for smaller viewports*/
+@media only screen
   and (max-width: 768px) {
     .inside header {
       position: static;
@@ -304,8 +307,11 @@ nav h1 a {
       width:100%;
       padding: 10px 40px 30px;
     }
-
     #breadcrumb {
       width:100%;
+    }
+    .inside #footer {
+     position: static;
+     width: 100%;
     }
   }
