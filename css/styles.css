@@ -15,8 +15,6 @@ body {
 	background-color: #fdfdfd;
 	margin: 0;
 	position:relative;
-  /*set min-width to prevent unnecessary wrapping*/
-  min-width: 400px;
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
@@ -294,7 +292,7 @@ nav h1 a {
 
 /*alter styling of restaurant detail for smaller viewports*/
 @media only screen
-  and (max-width: 768px) {
+  and (max-width: 1024px) {
     .inside header {
       position: static;
     }
